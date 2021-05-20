@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/query_detail_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="#2F000000"
+    android:visibility="gone">
+
+    <EditText
+        android:id="@+id/query_detail_txt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_65sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:text=""
+        android:gravity="start"
+        android:hint="@string/lbl_query_detail"
+        android:layout_centerInParent="true"
+        android:textColor="@color/black"
+        android:maxLength="100"
+        android:textSize="@dimen/text_16"
+        android:paddingLeft="@dimen/_5sdp"
+        android:layout_margin="@dimen/_20sdp"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/square_shape"/>
+
+    <Button
+        android:id="@+id/btnContinue_query"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/query_detail_txt"
+        android:background="@drawable/bg_btn_shape"
+        android:fontFamily="@font/roboto_medium"
+        android:shadowColor="@color/blue"
+        android:layout_weight="1"
+        android:text="@string/lbl_send"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_14"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_20sdp"/>
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_8sdp"
+    android:layout_marginLeft="@dimen/_4sdp"
+    android:layout_marginRight="@dimen/_4sdp"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="@dimen/_2sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivType"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/alert_icon"
+            android:padding="@dimen/_14sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="@drawable/app_bg_circle_stroked"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ivType">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="@dimen/text_16"
+                android:text="New Customers" />
+
+            <TextView
+                android:id="@+id/tvSubTitle"
+                android:layout_below="@+id/tvTitle"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/textChild"
+                android:textSize="@dimen/text_12"
+                android:text="New customer Added in Swayam" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:textColor="@color/textChild"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="@dimen/text_12"
+                android:text="czxc"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_below="@+id/tvSubTitle"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

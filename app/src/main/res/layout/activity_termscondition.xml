@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User.TermsconditionActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_43sdp"
+        android:elevation="@dimen/_5sdp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="@color/textHeader" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivBack"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:singleLine="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/lbl_terms_condition"
+            android:textColor="@color/textHeader"
+            android:textSize="@dimen/text_18" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/bottom_rel">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/term_condition_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/roboto_regular"
+                android:text=""
+                android:textColor="@color/textHeader"
+                android:textSize="@dimen/text_16"
+                android:padding="@dimen/_5sdp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/agree_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="I agree to the above mentioned terms &amp; condition."
+            android:gravity="center"
+            android:textColor="@color/textHeader"
+            android:textSize="@dimen/text_14"
+            android:padding="@dimen/_5sdp"/>
+
+        <RadioButton
+            android:id="@+id/disagree_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="I do not agree to the above mentioned terms &amp; condition."
+            android:gravity="center"
+            android:textColor="@color/textHeader"
+            android:textSize="@dimen/text_14"
+            android:padding="@dimen/_5sdp"/>
+
+
+        <LinearLayout
+            android:id="@+id/select_continue_li"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end|center_vertical"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:paddingLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:text="@string/Select_continue"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_14" />
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/bg_circle_shape"
+                android:backgroundTint="@color/colorPrimary"
+                android:padding="@dimen/_8sdp"
+                android:rotation="180"
+                android:tint="@color/white"
+                android:src="@drawable/ic_back_arrow" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/loading_layout"/>
+
+
+</RelativeLayout>

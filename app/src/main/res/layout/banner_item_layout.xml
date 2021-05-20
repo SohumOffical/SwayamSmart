@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/banner_cv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_130sdp"
+        app:cardCornerRadius="@dimen/_2sdp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginRight="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/banner_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

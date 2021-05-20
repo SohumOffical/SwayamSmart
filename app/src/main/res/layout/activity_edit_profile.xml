@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Activity.editprofile.EditProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:elevation="@dimen/_5sdp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:src="@drawable/ic_back_arrow"
+            android:tint="@color/textHeader"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivBack"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:singleLine="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/lbl_edit_profile"
+            android:textColor="@color/textHeader"
+            android:textSize="@dimen/text_18" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/btn_submit"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/profile_rel2"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_gravity="center_horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img2"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:src="@drawable/profile_icon"
+                    android:layout_centerInParent="true"
+                    app:civ_border_width="2px"
+                    app:civ_border_color="@color/colorPrimary"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_camera"
+                    android:padding="@dimen/_5sdp"
+                    android:visibility="gone"
+                    android:background="@drawable/circle_with_stoke"/>
+            </RelativeLayout>
+
+            //Name
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/lbl_name"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_12"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_Name"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_name"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_Name_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //Mobile
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/lbl_mobile"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_12"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_Mobile"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_mobile_number"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:layout_below="@+id/tl_Name"
+                android:fontFamily="@font/roboto_regular">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_Mobile_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/blue"
+                    android:focusableInTouchMode="false"
+                    android:singleLine="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //email
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/lbl_email"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_12"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_email_detail"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:layout_below="@+id/tl_Name"
+                android:fontFamily="@font/roboto_regular">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/tv_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/lbl_select_gender"
+                android:textColor="@color/black"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_dob"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/lbl_select_gender"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_gender_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:focusableInTouchMode="false"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            //DOB
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/lbl_date_of_year"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_12"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_dob_detail"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_date_of_year"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_dob_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:focusableInTouchMode="false"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //State
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/lbl_state"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_12"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_state"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/lbl_state"
+                android:layout_below="@+id/tl_address_line_2"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_state_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //Cities
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/lbl_cities"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_12"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_cities"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/lbl_Cities"
+                android:layout_below="@+id/tl_state"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_cities_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //Service Area
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/lbl_service_area"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_12"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_15sdp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_service_area"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/lbl_service_area"
+                android:layout_below="@+id/tl_state"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_service_area_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/bg_btn_shape"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/roboto_medium"
+        android:shadowColor="@color/blue"
+        android:text="@string/lbl_submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_14"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"/>
+
+    <include layout="@layout/number_picker_layout"/>
+
+    <include layout="@layout/loading_layout"/>
+
+</RelativeLayout>

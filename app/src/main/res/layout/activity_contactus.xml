@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.companydetails.ContactusActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:elevation="@dimen/_5sdp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="@color/textHeader" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivBack"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:singleLine="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/lbl_contact_us"
+            android:textColor="@color/textHeader"
+            android:textSize="@dimen/text_18" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/bottom_rel">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:src="@drawable/contact_us_img"
+                android:layout_gravity="center_horizontal"/>
+
+
+            //phone1
+            <TextView
+                android:id="@+id/tv_phone1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:singleLine="true"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/phone1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_16" />
+            <RelativeLayout
+                android:id="@+id/phone1_rel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_phone_call2"
+                    android:padding="@dimen/_6sdp"
+                    android:clickable="false"
+                    android:background="@drawable/circle_shape_border_stoke"/>
+
+                <TextView
+                    android:id="@+id/tv_phone_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:singleLine="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="+917483475272"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_16"
+                    android:clickable="false"/>
+
+            </RelativeLayout>
+
+            //phone2
+            <TextView
+                android:id="@+id/tv_phone2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:singleLine="true"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/phone2"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_16" />
+            <RelativeLayout
+                android:id="@+id/phone2_rel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_phone_call2"
+                    android:padding="@dimen/_6sdp"
+                    android:background="@drawable/circle_shape_border_stoke"/>
+
+                <TextView
+                    android:id="@+id/tv_phone_no2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:singleLine="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="+916302519834"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_16" />
+
+            </RelativeLayout>
+
+            //email
+            <TextView
+                android:id="@+id/tv_email1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:singleLine="true"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/email1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_16" />
+            <RelativeLayout
+                android:id="@+id/email_id1_rel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_mail_inbox"
+                    android:padding="@dimen/_6sdp"
+                    android:background="@drawable/circle_shape_border_stoke"/>
+
+                <TextView
+                    android:id="@+id/tv_email_no1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:singleLine="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="info@sohumngs.com"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_16" />
+
+            </RelativeLayout>
+
+
+            //email_2
+            <TextView
+                android:id="@+id/tv_email2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:singleLine="true"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/email2"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_16" />
+            <RelativeLayout
+                android:id="@+id/email_id2_rel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_mail_inbox"
+                    android:padding="@dimen/_6sdp"
+                    android:background="@drawable/circle_shape_border_stoke"/>
+
+                <TextView
+                    android:id="@+id/tv_email_no2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:singleLine="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="sales@sohumngs.com"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_16" />
+
+            </RelativeLayout>
+
+
+
+            //name
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:singleLine="true"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/phone1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_16"
+                android:visibility="gone"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_name"
+                style="@style/txt_ip_layoutbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_name"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/drak_blue"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //mobile
+            <TextView
+                android:id="@+id/tv_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:singleLine="true"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/hint_mobile_number"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_16"
+                android:visibility="gone"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_mobile"
+                style="@style/txt_ip_layoutbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_mobile_number"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/drak_blue"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //email_id
+            <TextView
+                android:id="@+id/tv_email_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:singleLine="true"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/hint_email"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_16"
+                android:visibility="gone"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_email_id"
+                style="@style/txt_ip_layoutbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/drak_blue"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //messgae
+            <TextView
+                android:id="@+id/tv_messgae"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:singleLine="true"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/hint_message"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_16"
+                android:visibility="gone"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_messgae"
+                style="@style/txt_ip_layoutbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_message"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_messgae"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/drak_blue"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/submit_img"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/bg_circle_shape"
+        android:backgroundTint="@color/colorPrimary"
+        android:padding="@dimen/_10sdp"
+        android:elevation="@dimen/_5sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_20sdp"
+        android:src="@drawable/ic_right_arrow_angle"
+        app:tint="@color/white"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/bottom_rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/contact_us_logo"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="1889, chintamaniswar,\n Bhubaneswar,Odisha"
+            android:textColor="@color/chocolate"
+            android:textSize="@dimen/text_12" />
+
+    </LinearLayout>
+
+    <include layout="@layout/loading_layout"/>
+
+
+</RelativeLayout>

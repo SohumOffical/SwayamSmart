@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="font_xlarge">26sp</dimen>
+    <dimen name="font_mlarge">20sp</dimen>
+    <dimen name="font_xxlarge">32sp</dimen>
+    <dimen name="font_xxxlarge">40sp</dimen>
+    <dimen name="font_large">16sp</dimen>
+    <dimen name="font_medium">14sp</dimen>
+    <dimen name="font_small">10sp</dimen>
+    <dimen name="font_normal">18sp</dimen>
+
+    <dimen name="text_24">24dp</dimen>
+    <dimen name="text_22">22dp</dimen>
+    <dimen name="text_20">20dp</dimen>
+    <dimen name="text_18">18dp</dimen>
+    <dimen name="text_16">16dp</dimen>
+    <dimen name="text_14">14dp</dimen>
+    <dimen name="text_12">12dp</dimen>
+    <dimen name="text_10">10dp</dimen>
+    <dimen name="text_8">8dp</dimen>
+    <dimen name="text_6">6dp</dimen>
+    <dimen name="text_4">4dp</dimen>
+
+    <dimen name="bg_1dp">1dp</dimen>
+
+    <dimen name="spacing_standard_new">@dimen/_16sdp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_standard">8dp</dimen>
+    <dimen name="layout_marginStart">16dp</dimen>
+    <dimen name="layout_marginTop">16dp</dimen>
+    <dimen name="layout_marginEnd">16dp</dimen>
+    <dimen name="boxCornerRadiusBottomEnd">18dp</dimen>
+    <dimen name="boxCornerRadiusTopStart">18dp</dimen>
+    <dimen name="boxCornerRadiusBottomStart">18dp</dimen>
+    <dimen name="boxCornerRadiusTopEnd">18dp</dimen>
+    <dimen name="spacing_control">@dimen/_4sdp</dimen>
+    <dimen name="text_50">50dp</dimen>
+    <dimen name="text_30">30dp</dimen>
+
+    <dimen name="boxCornerRadiusBottomEnd1">5dp</dimen>
+    <dimen name="boxCornerRadiusTopStart1">5dp</dimen>
+    <dimen name="boxCornerRadiusBottomStart1">5dp</dimen>
+    <dimen name="boxCornerRadiusTopEnd1">5dp</dimen>
+
+    --------------------------SearchView-----------------------
+    <dimen name="search_icon_padding">8dp</dimen>
+    <dimen name="search_view_text_padding">65dp</dimen>
+
+    <dimen name="file_icon_width">40dp</dimen>
+    <dimen name="file_icon_height">40dp</dimen>
+    <dimen name="file_name_textSize">17sp</dimen>
+    <dimen name="file_item_checkbox_size">22dp</dimen>
+</resources>

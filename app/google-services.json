@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "569140761168",
+    "project_id": "swayam-smart",
+    "storage_bucket": "swayam-smart.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569140761168:android:0ab54ccaf1e90f0445b755",
+        "android_client_info": {
+          "package_name": "com.sngs.swayam.smartapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569140761168-dgrkjbhvtt41vjebalmput4akfv39mdl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sngs.swayam.smartapp",
+            "certificate_hash": "efd3421acffbc7f7db0e44e5aba9f2787461a61c"
+          }
+        },
+        {
+          "client_id": "569140761168-8uhh8m10nmgtlm59ma792ksfnmn8acqn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9_9c80l0tm-z15MYpywUYB_nvWpM-YSc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "569140761168-8uhh8m10nmgtlm59ma792ksfnmn8acqn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

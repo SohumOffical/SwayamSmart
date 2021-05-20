@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/login_main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".User.LoginActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_above="@+id/bottom_rel">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/text_you_want_to"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_24"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/app_name"
+                android:visibility="gone"
+                android:textAllCaps="true"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_24"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_20sdp"/>
+
+            <ImageView
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_180sdp"
+                android:src="@drawable/app_logo"
+                android:layout_gravity="center_horizontal"/>
+
+            //Mobile
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_Mobile"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_enter_10_digits_mobile_number"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:fontFamily="@font/roboto_regular">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_Mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //mpin
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_Mpin"
+                style="@style/txt_ip_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_otp"
+                android:theme="@style/txt_TextInAppearance"
+                app:errorEnabled="true"
+                android:visibility="gone"
+                android:fontFamily="@font/roboto_regular">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_Mpin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:singleLine="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:theme="@style/txt_EditInAppearance" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp">
+
+                <Button
+                    android:id="@+id/btnContinue"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp"
+                    android:background="@drawable/bg_btn_shape"
+                    android:fontFamily="@font/roboto_medium"
+                    android:shadowColor="@color/blue"
+                    android:layout_weight="1"
+                    android:text="@string/lbl_login"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_14"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/lbl_or"
+                    android:textAllCaps="true"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/textChild"
+                    android:textSize="@dimen/text_12"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"/>
+
+
+
+                <Button
+                    android:id="@+id/btnsignup"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp"
+                    android:background="@drawable/btn_shape_2"
+                    android:fontFamily="@font/roboto_medium"
+                    android:shadowColor="@color/blue"
+                    android:text="@string/registration"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_14" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/cashback"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include layout="@layout/loading_layout"/>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#FF7C1D</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#FF7C1D</color>
+
+    <color name="color1">#F3E803</color>
+    <color name="color2">#04C1E1</color>
+    <color name="color3">#007C82</color>
+    <color name="color4">#FF7C1D</color>
+    <color name="blue_color">#287FFF</color>
+    <color name="green">#4CAF50</color>
+    <color name="chocolate">#690B04</color>
+
+    <color name="textChild">#747474</color>
+    <color name="textHeader">#464545</color>
+    <color name="view_color">#DADADA</color>
+    <color name="drak_blue">#1B3769</color>
+    <color name="drawertextChild">#515151</color>
+    <color name="startColor">@color/colorPrimary</color>
+    <color name="endColor">@color/colorPrimary</color>
+    <color name="blue">#4C92C0</color>
+    <color name="white">#ffffff</color>
+    <color name="light_gray">#FAFAFA</color>
+    <color name="black">#000000</color>
+    <color name="light_orange">#F18765</color>
+    <color name="text_color">#FFFFFF</color>
+
+    <color name="search_layover_bg">#50000000</color>
+    <color name="checkbox_color">#FB4846</color>
+    <color name="checkbox_unchecked_color">#DFDFDF</color>
+    <color name="transparent_black">#94333232</color>
+    <color name="bg_gray">#ecedef</color>
+
+    <color name="blue_1">#064E87</color>
+    <color name="blue_2">#03A9F4</color>
+    <color name="color_gree_shadow">#00A8B3</color>
+
+</resources>
