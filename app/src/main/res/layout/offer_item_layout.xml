@@ -41,8 +41,8 @@
             android:singleLine="true"
             android:layout_gravity="center_vertical"
             android:text="Flat 20% Off @"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_10"
+            android:textColor="@color/chocolate"
+            android:textSize="@dimen/text_14"
             android:paddingLeft="@dimen/_20sdp"
             android:paddingRight="@dimen/_20sdp"/>
 

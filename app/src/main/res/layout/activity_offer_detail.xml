@@ -111,6 +111,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="@dimen/_1sdp">
 
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
