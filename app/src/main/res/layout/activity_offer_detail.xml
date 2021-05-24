@@ -104,12 +104,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_5sdp">
-
-
-
-            </RelativeLayout>
+                android:layout_marginTop="@dimen/_2sdp"/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -129,7 +124,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:layout_marginTop="@dimen/_10sdp">
+                        android:layout_marginTop="@dimen/_5sdp">
 
                         <TextView
                             android:id="@+id/service_txt"

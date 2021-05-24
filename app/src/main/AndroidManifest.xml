@@ -24,8 +24,9 @@
         android:roundIcon="@drawable/app_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:replace="android:allowBackup">
-        <activity android:name=".User.TermsconditionActivity"></activity>
+        tools:replace="android:allowBackup"
+        android:name=".MyApplication">
+        <activity android:name=".User.TermsconditionActivity"/>
         <activity android:name=".Activity.companydetails.ContactusActivity" />
         <activity android:name=".Activity.companydetails.AboutUsActivity" />
         <activity

@@ -169,7 +169,7 @@ class OfferDetailActivity : AppCompatActivity()
 
         if(!Links.PromotionResult_list.get(selected_pos).getmPromotionCouponOfferPrice().equals("0")){
             coupon_offer_txt.visibility = View.VISIBLE
-            coupon_offer_txt.setText("You get extract offer : ₹ "+Links.PromotionResult_list.get(selected_pos).getmPromotionCouponOfferPrice())
+            coupon_offer_txt.setText("You get Additional Offer : ₹ "+Links.PromotionResult_list.get(selected_pos).getmPromotionCouponOfferPrice())
         }
 
         promotion_Id = Links.PromotionResult_list.get(selected_pos).promotionId.toString()
