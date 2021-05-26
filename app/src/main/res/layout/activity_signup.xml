@@ -213,7 +213,7 @@
                 style="@style/txt_ip_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/lbl_business_start_year"
+                android:hint="@string/lbl_birth_year"
                 android:theme="@style/txt_TextInAppearance"
                 app:errorEnabled="true"
                 android:fontFamily="@font/roboto_regular">

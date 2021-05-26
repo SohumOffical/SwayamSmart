@@ -21,6 +21,7 @@ import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.naimee.swayam.utlis.theme3bottomnavigation.BottomNavigation
 import com.sngs.swayam.smartapp.Activity.companydetails.AboutUsActivity
 import com.sngs.swayam.smartapp.Activity.companydetails.ContactusActivity
 import com.sngs.swayam.smartapp.Activity.datausage.DataUsagesActivity
@@ -50,6 +51,14 @@ import retrofit2.Response
 class HomeActivity : AppCompatActivity() {
 
     var speedScroll : Long = 50000;
+
+    companion object {
+        private const val ID_HOME = 1
+        private const val ID_MARKET = 2
+        private const val ID_UTILITIES = 3
+        private const val ID_NOTIFICATION = 4
+        private const val ID_SHARE = 5
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -106,6 +115,70 @@ class HomeActivity : AppCompatActivity() {
 
         val banner_rv = findViewById(R.id.banner_rv) as RecyclerView
         banner_rv.layoutManager = LinearLayoutManager(applicationContext, LinearLayoutManager.HORIZONTAL,false)
+
+        bottomNavigation.add(
+            BottomNavigation.Model(
+                ID_HOME,
+                R.drawable.home_icon
+            ))
+        bottomNavigation.add(
+            BottomNavigation.Model(
+                ID_MARKET,
+                R.drawable.market_icon
+            ))
+        bottomNavigation.add(
+            BottomNavigation.Model(
+                ID_UTILITIES,
+                R.drawable.utility_icon
+            ))
+        bottomNavigation.add(
+            BottomNavigation.Model(
+                ID_NOTIFICATION,
+                R.drawable.ic_notification
+            ))
+        bottomNavigation.add(
+            BottomNavigation.Model(
+                ID_SHARE,
+                R.drawable.ic_share_icon
+            ))
+
+        bottomNavigation.setOnShowListener {
+            val name = when (it.id) {
+                ID_HOME -> "HOME"
+                ID_MARKET -> "MARKET"
+                ID_UTILITIES -> "UTILITIES"
+                ID_NOTIFICATION -> "NOTIFICATION"
+                ID_SHARE -> "SHARE"
+                else -> ""
+            }
+        }
+
+
+        bottomNavigation.setOnClickMenuListener {
+            val name = when (it.id) {
+                ID_HOME -> "HOME"
+                ID_MARKET -> "MARKET"
+                ID_UTILITIES -> "UTILITIES"
+                ID_NOTIFICATION -> "NOTIFICATION"
+                ID_SHARE -> "SHARE"
+                else -> ""
+            }
+
+            if(name.equals("MARKET")){ }
+
+            if(name.equals("UTILITIES")){ }
+
+            if(name.equals("NOTIFICATION")){
+                val intent = Intent(this, NotificationActivity::class.java)
+                startActivity(intent)
+            }
+
+        }
+
+        Handler().postDelayed(Runnable {
+            bottomNavigation.show(ID_HOME,true)
+        },800)
+
 
         api_calling_for_user_promotion_list()
         api_calling_for_banner_list()

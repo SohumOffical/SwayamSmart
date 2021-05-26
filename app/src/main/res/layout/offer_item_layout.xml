@@ -34,15 +34,15 @@
             android:id="@+id/product_txt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_regular"
+            android:fontFamily="@font/roboto_bold"
             android:layout_marginTop="@dimen/_5sdp"
             android:shadowColor="@color/blue"
             android:gravity="center"
             android:singleLine="true"
             android:layout_gravity="center_vertical"
             android:text="Flat 20% Off @"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_10"
+            android:textColor="@color/chocolate"
+            android:textSize="@dimen/text_14"
             android:paddingLeft="@dimen/_20sdp"
             android:paddingRight="@dimen/_20sdp"/>
 

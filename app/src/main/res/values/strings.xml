@@ -2,6 +2,7 @@
     <string name="app_name">Swayam Smart</string>
 
     <string name="text_you_want_to">Welcome to</string>
+    <string name="text_you_want_to_swyam">Welcome to Swayam Smart</string>
     <string name="text_forget_mpin">Forget MPIN  ?</string>
     <string name="text_get_otp">Get OTP</string>
     <string name="lbl_continue">Continue</string>
@@ -218,7 +219,7 @@
     <string name="lbl_cities">Cities</string>
     <string name="service_description">Service Description</string>
     <string name="message_error">please enter message</string>
-    <string name="agree_our_terms_condition">Please agree our terms condition</string>
+    <string name="agree_our_terms_condition">To proceed, please agree to our terms and conditions.Thank you.</string>
     <string-array name="array_palette">
         <item>#00acb0</item>
         <item>#92ac01</item>
@@ -289,4 +290,8 @@
     <string name="lbl_birth_year">Birth Year</string>
     <string name="lbl_terms_condition">Terms &amp; Condition</string>
     <string name="Select_continue">Select &amp; Continue</string>
+    <string name="mobile_data_usage">Mobile Data Usage</string>
+    <string name="app_wisa_data_usage">App Wisa Data Usage</string>
+    <string name="fitness_tracker">Fitness Tracker</string>
+    <string name="digital_well_being">Digital Well Being</string>
 </resources>

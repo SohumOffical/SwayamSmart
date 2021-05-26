@@ -207,7 +207,7 @@ class SignupActivity : AppCompatActivity() {
 
     fun update_app_dilogbox(error: String?) {
         FancyAlertDialog.Builder(this@SignupActivity)
-            .setTitle(resources.getString(R.string.app_name))
+            .setTitle(resources.getString(R.string.text_you_want_to_swyam))
             .setMessage(error)
             .setPositiveBtnText(resources.getString(R.string.okay))
             .setNegativeBtnText(resources.getString(R.string.cancel))
