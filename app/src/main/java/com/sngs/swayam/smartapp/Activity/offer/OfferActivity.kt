@@ -19,6 +19,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class OfferActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
@@ -63,12 +64,10 @@ class OfferActivity : AppCompatActivity() {
                     loading_layout.setVisibility(View.GONE)
                     if (response.isSuccessful()) {
                         val success_v = response.body()?.success
-                        Links.PromotionResult_list.clear()
-                        if (success_v?.toInt()==1)
-                        {
+                        if (success_v?.toInt()==1) {
                             if(response.body()!!.promotionListResult!=null){
-                                Links.PromotionResult_list = response.body()!!.promotionListResult
-                                offer_rv_list.adapter = OfferListAdapter(Links.PromotionResult_list,this@OfferActivity)
+                                var PromotionResult_list = response.body()!!.promotionListResult
+                                offer_rv_list.adapter = OfferListAdapter(PromotionResult_list,this@OfferActivity)
                             }
                         }
                         else {
