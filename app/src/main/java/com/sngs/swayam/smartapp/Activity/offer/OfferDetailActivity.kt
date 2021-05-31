@@ -160,12 +160,18 @@ class OfferDetailActivity : AppCompatActivity()
                 +Links.PromotionResult_list.get(selected_pos).getmTotalViewed())
 
 
-        if(!Links.PromotionResult_list.get(selected_pos).subCategoryName.isEmpty()){
-            sub_category_detail_txt.setText(""+ Links.PromotionResult_list.get(selected_pos).subCategoryName)
+        if(Links.PromotionResult_list.get(selected_pos).subCategoryName!=null){
+            if(!Links.PromotionResult_list.get(selected_pos).subCategoryName.isEmpty()){
+                sub_category_detail_txt.setText(""+ Links.PromotionResult_list.get(selected_pos).subCategoryName)
+            }
+            else{
+                sub_category_li.visibility= View.GONE
+            }
         }
         else{
             sub_category_li.visibility= View.GONE
         }
+
 
         if(!Links.PromotionResult_list.get(selected_pos).getmPromotionCouponOfferPrice().equals("0")){
             coupon_offer_txt.visibility = View.VISIBLE
