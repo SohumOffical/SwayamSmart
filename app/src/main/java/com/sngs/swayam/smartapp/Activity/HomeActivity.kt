@@ -413,7 +413,7 @@ class HomeActivity : AppCompatActivity() {
         val auth_token = sharedPreferences.getString("Auth_Token","")
 
         //loading_layout.setVisibility(View.VISIBLE)
-        ServiceCall.callUserPromotionList(this, auth_id, auth_token, Links.User_Type)
+        ServiceCall.callUserPromotionList(this, auth_id, auth_token, Links.User_Type,"0")
                 .enqueue(object : Callback<GetCustomerPromotionListBaseResponse> {
                     override fun onResponse(call: Call<GetCustomerPromotionListBaseResponse>, response: Response<GetCustomerPromotionListBaseResponse>) {
                         //loading_layout.setVisibility(View.GONE)
@@ -424,7 +424,7 @@ class HomeActivity : AppCompatActivity() {
                                 if(response.body()!!.promotionListResult!=null){
                                     Links.PromotionResult_list.clear()
                                     Links.PromotionResult_list = response.body()!!.promotionListResult
-                                    your_offer_rv.adapter = OfferListAdapter(Links.PromotionResult_list,this@HomeActivity)
+                                    your_offer_rv.adapter = OfferListAdapter(Links.PromotionResult_list,this@HomeActivity,"0")
                                 }
                             }
                             else {

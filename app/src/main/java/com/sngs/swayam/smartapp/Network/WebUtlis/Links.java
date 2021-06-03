@@ -14,10 +14,12 @@ import com.sngs.swayam.smartapp.Model.DataUsage;
 import com.sngs.swayam.smartapp.Network.model.AdvertismentList.PromotionBannerListResult;
 import com.sngs.swayam.smartapp.Network.model.Area.AreaListDatum;
 import com.sngs.swayam.smartapp.Network.model.BannerList.BannerListResult;
+import com.sngs.swayam.smartapp.Network.model.Category.CategoryListDatum;
 import com.sngs.swayam.smartapp.Network.model.City.CityListDatum;
 
 import com.sngs.swayam.smartapp.Network.model.Notification.Notification;
 import com.sngs.swayam.smartapp.Network.model.PromotionDetail.PromotionListResult;
+import com.sngs.swayam.smartapp.Network.model.ServiceProvider.ServiceListDatum;
 import com.sngs.swayam.smartapp.Network.model.State.StateListDatum;
 import com.sngs.swayam.smartapp.Network.model.UserDetail.UserResult;
 import com.sngs.swayam.smartapp.R;
@@ -80,8 +82,13 @@ public class Links {
     //notification
     public  static  final String Get_Notification_List = "getNotificationList.php";
 
+    //list
+    public  static  final String Get_Service_Provider_List = "getServiceList.php";
+    public  static  final String Get_Category_List = "getCategoryList.php";
+
 
     public static  ArrayList<String> selected_image_array_list = new ArrayList<String>();
+
 
 
     public static class Header {
@@ -138,6 +145,11 @@ public class Links {
         public static final String city_Id= "cityId";
     }
 
+    public static class Promotion_Detail {
+        public static final String category_Id = "categoryId";
+    }
+
+
     public static class Purchase_Promotion_Detail {
         public static final String Promotion_Id = "promotionId";
     }
@@ -170,6 +182,9 @@ public class Links {
         public static final String Message = "message";
     }
 
+    public static class GetCategoryListDetail {
+        public static final String Service_Id = "serviceId";
+    }
 
     public static void snack_bar(Context context, RelativeLayout main_layout, String mes){
         TSnackbar snackbar = TSnackbar.make(main_layout, ""+mes, TSnackbar.LENGTH_LONG);
@@ -216,6 +231,14 @@ public class Links {
 
     //notification
     public static List<Notification> notification_List = new ArrayList<>();
+
+
+    public static List<ServiceListDatum> service_list = new ArrayList<>();
+    public static List<String> service_sp_list = new ArrayList<>();
+
+    public static List<CategoryListDatum> category_list = new ArrayList<>();
+    public static List<String> category_sp_list = new ArrayList<>();
+
 
     public static String getFileSize(long size) {
         if (size <= 0)

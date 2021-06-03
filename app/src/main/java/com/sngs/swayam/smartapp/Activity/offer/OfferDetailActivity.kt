@@ -2,11 +2,11 @@ package com.sngs.swayam.smartapp.Activity.offer
 
 import android.content.Context
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.jsibbold.zoomage.ZoomageView
 import com.sngs.swayam.smartapp.Network.WebUtlis.Links
 import com.sngs.swayam.smartapp.Network.model.BaseResponse
 import com.sngs.swayam.smartapp.Network.model.CustomerDetail.CustomerDetailBaseResponse
@@ -14,13 +14,9 @@ import com.sngs.swayam.smartapp.Network.model.PromotionList.GetCustomerPromotion
 import com.sngs.swayam.smartapp.Network.servicecall.ServiceCall
 import com.sngs.swayam.smartapp.R
 import kotlinx.android.synthetic.main.activity_offer_detail.*
-import kotlinx.android.synthetic.main.activity_offer_detail.ivBack
-import kotlinx.android.synthetic.main.activity_offer_detail.main_layout
-import kotlinx.android.synthetic.main.activity_state_city_list.*
 import kotlinx.android.synthetic.main.img_details_layout.*
 import kotlinx.android.synthetic.main.loading_layout.*
 import kotlinx.android.synthetic.main.query_details_layout.*
-import kotlinx.android.synthetic.main.query_details_layout.btnContinue_query
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -30,6 +26,7 @@ class OfferDetailActivity : AppCompatActivity()
     var selected_pos : Int = 0
     var promotion_Id : String = ""
     var cutsomer_id : String = ""
+    var Category_id : String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +45,7 @@ class OfferDetailActivity : AppCompatActivity()
     private fun init()
     {
         selected_pos = intent.getStringExtra("selected_pos").toString().toInt()
+        Category_id = intent.getStringExtra("category_id").toString()
 
         api_calling_for_user_promotion_list()
     }
@@ -99,7 +97,7 @@ class OfferDetailActivity : AppCompatActivity()
 
         loading_layout.setVisibility(View.VISIBLE)
 
-        ServiceCall.callUserPromotionList(this, auth_id, auth_token, Links.User_Type)
+        ServiceCall.callUserPromotionList(this, auth_id, auth_token, Links.User_Type,Category_id)
             .enqueue(object : Callback<GetCustomerPromotionListBaseResponse> {
                 override fun onResponse(call: Call<GetCustomerPromotionListBaseResponse>, response: Response<GetCustomerPromotionListBaseResponse>) {
                     loading_layout.setVisibility(View.GONE)
@@ -136,9 +134,19 @@ class OfferDetailActivity : AppCompatActivity()
             .placeholder(R.drawable.app_logo).into(img_detail);
 
         prom_title_txt.setText(""+Links.PromotionResult_list.get(selected_pos).promotionTitle)
-
         original_price_detail_txt.setText(""+Links.PromotionResult_list.get(selected_pos).promotionPrice)
-        offer_price_detail_txt.setText("₹"+Links.PromotionResult_list.get(selected_pos).promotionAdditionalOffer)
+
+        val s: String = Links.PromotionResult_list.get(selected_pos).promotionAdditionalOffer.toString()
+        val position = s.indexOf("%")
+        Log.e("position"," "+position)
+
+        if(position>0){
+            offer_price_detail_txt.setText(""+Links.PromotionResult_list.get(selected_pos).promotionAdditionalOffer)
+        }else{
+            offer_price_detail_txt.setText("₹"+Links.PromotionResult_list.get(selected_pos).promotionAdditionalOffer)
+        }
+
+      //  offer_price_detail_txt.setText("₹"+Links.PromotionResult_list.get(selected_pos).promotionAdditionalOffer)
         additional_offer_detail_txt.setText(""+Links.PromotionResult_list.get(selected_pos).getmPromotionFinalRate())
 
         category_detail_txt.setText(""+Links.PromotionResult_list.get(selected_pos).categoryName)

@@ -294,4 +294,5 @@
     <string name="app_wisa_data_usage">App Wisa Data Usage</string>
     <string name="fitness_tracker">Fitness Tracker</string>
     <string name="digital_well_being">Digital Well Being</string>
+    <string name="lbl_category">Category</string>
 </resources>

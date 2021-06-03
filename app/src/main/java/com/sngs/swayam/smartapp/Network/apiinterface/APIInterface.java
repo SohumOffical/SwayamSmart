@@ -7,11 +7,13 @@ import com.sngs.swayam.smartapp.Network.model.AdvertismentList.AdvertismentListB
 import com.sngs.swayam.smartapp.Network.model.Area.GetAreaListBaseResponse;
 import com.sngs.swayam.smartapp.Network.model.BannerList.BannerListBaseResponse;
 import com.sngs.swayam.smartapp.Network.model.BaseResponse;
+import com.sngs.swayam.smartapp.Network.model.Category.GetCategoryListBaseResponse;
 import com.sngs.swayam.smartapp.Network.model.City.GetCityListBaseResponse;
 import com.sngs.swayam.smartapp.Network.model.CustomerDetail.CustomerDetailBaseResponse;
 import com.sngs.swayam.smartapp.Network.model.MobileVerify.MobileVerifyBaseResponse;
 import com.sngs.swayam.smartapp.Network.model.Notification.NotificationBaseResponse;
 import com.sngs.swayam.smartapp.Network.model.PromotionList.GetCustomerPromotionListBaseResponse;
+import com.sngs.swayam.smartapp.Network.model.ServiceProvider.GetServiceProviderBaseResponse;
 import com.sngs.swayam.smartapp.Network.model.State.GetStateListBaseResponse;
 import com.sngs.swayam.smartapp.Network.model.UserDetail.UserDetailBaseResponse;
 import com.sngs.swayam.smartapp.Network.model.UserSignIn.UserSignInBaseResponse;
@@ -132,5 +134,17 @@ public interface APIInterface {
     @POST(Links.Get_Notification_List)
     @Headers({ "Content-Type: application/json;charset=UTF-8"})
     Call<NotificationBaseResponse> postGetNotificationList(@Body HashMap<String, String> mBodyMap);
+
+
+    //Service Provider List
+    @POST(Links.Get_Service_Provider_List)
+    @Headers({ "Content-Type: application/json;charset=UTF-8"})
+    Call<GetServiceProviderBaseResponse> postGetServiceProviderList(@Body HashMap<String, String> mBodyMap);
+
+
+    //Category List
+    @POST(Links.Get_Category_List)
+    @Headers({ "Content-Type: application/json;charset=UTF-8"})
+    Call<GetCategoryListBaseResponse> postGetCategoryList(@Body HashMap<String, String> mBodyMap);
 
 }

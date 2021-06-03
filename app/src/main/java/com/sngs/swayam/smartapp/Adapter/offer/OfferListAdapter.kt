@@ -13,7 +13,7 @@ import com.sngs.swayam.smartapp.R
 import kotlinx.android.synthetic.main.offer_item_layout.view.*
 
 
-class OfferListAdapter(var arrayList: List<PromotionListResult>, private val context: Context) :
+class OfferListAdapter(var arrayList: List<PromotionListResult>, private val context: Context, var selected_category_id : String) :
     RecyclerView.Adapter<OfferListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -43,6 +43,7 @@ class OfferListAdapter(var arrayList: List<PromotionListResult>, private val con
             val intent = Intent(context, OfferDetailActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             intent.putExtra("selected_pos",""+position)
+            intent.putExtra("category_id",""+selected_category_id)
             context.startActivity(intent)
         }
     }
