@@ -132,7 +132,7 @@ class OfferActivity : AppCompatActivity() {
                         selected_service_id = "0"
                     }
                     else{
-                        selected_service_id = Links.service_list.get(position).serviceId
+                        selected_service_id = Links.service_list.get(position-1).serviceId
                     }
                     api_calling_for_category_list()
                 }
