@@ -29,11 +29,11 @@
         <activity android:name=".User.TermsconditionActivity"/>
         <activity android:name=".Activity.companydetails.ContactusActivity" />
         <activity android:name=".Activity.companydetails.AboutUsActivity" />
-        <activity
-            android:name=".Activity.usages.AppDataUsagesActivity"
+        <activity android:name=".Activity.usages.AppDataUsagesActivity"
             tools:ignore="GoogleAppIndexingWarning,LockedOrientationActivity" />
         <activity android:name=".Activity.datausage.DataUsagesActivity" />
-        <activity android:name=".Activity.offer.OfferDetailActivity" />
+        <activity android:name=".Activity.offer.OfferDetailActivity"
+            android:windowSoftInputMode="adjustResize"/>
         <activity android:name=".Activity.offer.OfferActivity" />
         <activity android:name=".Activity.editprofile.EditProfileActivity" />
         <activity android:name=".Activity.notification.NotificationActivity" />

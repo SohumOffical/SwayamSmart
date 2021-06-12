@@ -139,7 +139,6 @@ class OfferDetailActivity : AppCompatActivity()
         val s: String = Links.PromotionResult_list.get(selected_pos).promotionAdditionalOffer.toString()
         val position = s.indexOf("%")
         Log.e("position"," "+position)
-
         if(position>0){
             offer_price_detail_txt.setText(""+Links.PromotionResult_list.get(selected_pos).promotionAdditionalOffer)
         }else{

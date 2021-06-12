@@ -359,13 +359,47 @@ public class ServiceCall  extends AppCompatActivity {
         return APIClient.getClient().create(APIInterface.class).postGetNotificationList(mBodyMap);
     }
 
-    //Service Provider List
-    public static Call<GetServiceProviderBaseResponse> callGetServiceProviderList(Context context, String auth_id, String auth_token, String user_type) {
+    public static Call<BaseResponse> callDeleteNotification(Context context, String auth_id,
+                                                            String auth_token, String user_type,
+                                                            String delete_notification_id) {
 
         HashMap<String, String> mBodyMap = new HashMap<String, String>();
         mBodyMap.put(Links.Header.Auth_ID,auth_id);
         mBodyMap.put(Links.Header.Auth_Token,auth_token);
         mBodyMap.put(Links.Header.User_Type,user_type);
+        mBodyMap.put(Links.Notificationview.notificationId,delete_notification_id);
+
+        HashMapLog.getHashMapLog("callDeleteNotification", mBodyMap);
+
+        return APIClient.getClient().create(APIInterface.class).postDelete_Notification(mBodyMap);
+    }
+
+    public static Call<BaseResponse> callPromotionQueryReply(Context context, String auth_id,
+                                                             String auth_token, String user_type,
+                                                             String promotion_QueryId,String query_Replay) {
+
+        HashMap<String, String> mBodyMap = new HashMap<String, String>();
+        mBodyMap.put(Links.Header.Auth_ID,auth_id);
+        mBodyMap.put(Links.Header.Auth_Token,auth_token);
+        mBodyMap.put(Links.Header.User_Type,user_type);
+        mBodyMap.put(Links.Promotion_QueryReplyview.promotion_QueryId,promotion_QueryId);
+        mBodyMap.put(Links.Promotion_QueryReplyview.query_Replay,query_Replay);
+
+        HashMapLog.getHashMapLog("callDeleteNotification", mBodyMap);
+
+        return APIClient.getClient().create(APIInterface.class).postPromotionQueryReply_Notification(mBodyMap);
+    }
+
+    //Service Provider List
+    public static Call<GetServiceProviderBaseResponse> callGetServiceProviderList(Context context, String auth_id,
+                                                                                  String auth_token, String user_type,
+                                                                                  String filter_Type) {
+
+        HashMap<String, String> mBodyMap = new HashMap<String, String>();
+        mBodyMap.put(Links.Header.Auth_ID,auth_id);
+        mBodyMap.put(Links.Header.Auth_Token,auth_token);
+        mBodyMap.put(Links.Header.User_Type,user_type);
+        mBodyMap.put(Links.Service_Detail.Filter_Type,filter_Type);
 
         HashMapLog.getHashMapLog("callGetServiceProviderList", mBodyMap);
 
@@ -374,13 +408,15 @@ public class ServiceCall  extends AppCompatActivity {
 
     //Get Category List
     public static Call<GetCategoryListBaseResponse> callGetCategoryList(Context context, String auth_id, String auth_token, String user_type,
-                                                                        String service_id) {
+                                                                        String service_id,String filter_Type) {
 
         HashMap<String, String> mBodyMap = new HashMap<String, String>();
         mBodyMap.put(Links.Header.Auth_ID,auth_id);
         mBodyMap.put(Links.Header.Auth_Token,auth_token);
         mBodyMap.put(Links.Header.User_Type,user_type);
         mBodyMap.put(Links.GetCategoryListDetail.Service_Id,service_id);
+        mBodyMap.put(Links.GetCategoryListDetail.Filter_Type,filter_Type);
+
 
         HashMapLog.getHashMapLog("callGetCategoryList", mBodyMap);
 

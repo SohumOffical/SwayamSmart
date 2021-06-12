@@ -81,6 +81,8 @@ public class Links {
 
     //notification
     public  static  final String Get_Notification_List = "getNotificationList.php";
+    public  static  final String Delete_Notification = "deleteNotification.php";
+    public  static  final String Promotion_QueryReply = "promotionQueryReply.php";
 
     //list
     public  static  final String Get_Service_Provider_List = "getServiceList.php";
@@ -140,6 +142,10 @@ public class Links {
         public static final String state_Id = "stateId";
     }
 
+    public static class Service_Detail {
+        public static final String Filter_Type = "isFilter";
+    }
+
     public static class Area_List_Detail {
         public static final String state_Id = "stateId";
         public static final String city_Id= "cityId";
@@ -184,6 +190,16 @@ public class Links {
 
     public static class GetCategoryListDetail {
         public static final String Service_Id = "serviceId";
+        public static final String Filter_Type = "isFilter";
+    }
+
+    public static class Notificationview{
+        public static final String notificationId = "notificationId";
+    }
+
+    public static class Promotion_QueryReplyview{
+        public static final String promotion_QueryId = "promotionQueryId";
+        public static final String query_Replay = "queryReplay";
     }
 
     public static void snack_bar(Context context, RelativeLayout main_layout, String mes){

@@ -183,7 +183,7 @@
     <string name="okay">Okay</string>
     <string name="cancel">Cancel</string>
     <string name="signup_mes">Once your profile is created can not be changed</string>
-    <string name="email_validation">Please enter validate mail address</string>
+    <string name="email_validation">Please enter valid email id/address</string>
     <string name="contact_detail">Contact Detail</string>
     <string name="shop_name">Shop Name</string>
     <string name="offer_price">Offer Price</string>

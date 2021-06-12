@@ -2,6 +2,7 @@ package com.sngs.swayam.smartapp.Adapter.offer
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,6 +39,16 @@ class OfferListAdapter(var arrayList: List<PromotionListResult>, private val con
 
         holder.itemView.product_txt.setText("Flat Rs. "+arrayList.get(position).getmPromotionFinalRate())
         holder.itemView.coins.setText("Get for 20 Coins")
+
+        val s: String = arrayList.get(position).promotionAdditionalOffer.toString()
+        val perposition = s.indexOf("%")
+        if(perposition>0){
+            holder.itemView.offer_txt.setText("Offer : "+arrayList.get(position).promotionAdditionalOffer)
+        }else{
+            Log.e("position"," "+position+ " "+arrayList.get(position).promotionAdditionalOffer)
+            holder.itemView.offer_txt.setText("Offer : ₹"+arrayList.get(position).promotionAdditionalOffer)
+        }
+
 
         holder.itemView.offer_item_layout.setOnClickListener {
             val intent = Intent(context, OfferDetailActivity::class.java)

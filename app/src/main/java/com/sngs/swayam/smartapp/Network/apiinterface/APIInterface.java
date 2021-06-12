@@ -135,6 +135,14 @@ public interface APIInterface {
     @Headers({ "Content-Type: application/json;charset=UTF-8"})
     Call<NotificationBaseResponse> postGetNotificationList(@Body HashMap<String, String> mBodyMap);
 
+    @POST(Links.Delete_Notification)
+    @Headers({ "Content-Type: application/json;charset=UTF-8"})
+    Call<BaseResponse> postDelete_Notification(@Body HashMap<String, String> mBodyMap);
+
+    @POST(Links.Promotion_QueryReply)
+    @Headers({ "Content-Type: application/json;charset=UTF-8"})
+    Call<BaseResponse> postPromotionQueryReply_Notification(@Body HashMap<String, String> mBodyMap);
+
 
     //Service Provider List
     @POST(Links.Get_Service_Provider_List)

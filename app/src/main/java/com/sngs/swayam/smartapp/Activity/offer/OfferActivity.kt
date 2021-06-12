@@ -97,7 +97,7 @@ class OfferActivity : AppCompatActivity() {
         val auth_id = sharedPreferences.getString("Auth_ID","")
         val auth_token = sharedPreferences.getString("Auth_Token","")
 
-        ServiceCall.callGetServiceProviderList(this, auth_id, auth_token, Links.User_Type)
+        ServiceCall.callGetServiceProviderList(this, auth_id, auth_token, Links.User_Type,"0")
                 .enqueue(object : Callback<GetServiceProviderBaseResponse> {
                     override fun onResponse(call: Call<GetServiceProviderBaseResponse>, response: Response<GetServiceProviderBaseResponse>) {
                         loading_layout.setVisibility(View.GONE)
@@ -148,7 +148,7 @@ class OfferActivity : AppCompatActivity() {
 
         loading_layout.setVisibility(View.VISIBLE)
 
-        ServiceCall.callGetCategoryList(this, auth_id, auth_token, Links.User_Type, selected_service_id)
+        ServiceCall.callGetCategoryList(this, auth_id, auth_token, Links.User_Type, selected_service_id,"0")
                 .enqueue(object : Callback<GetCategoryListBaseResponse> {
                     override fun onResponse(call: Call<GetCategoryListBaseResponse>, response: Response<GetCategoryListBaseResponse>) {
                         loading_layout.setVisibility(View.GONE)

@@ -51,6 +51,8 @@
 
     </RelativeLayout>
 
+    <include layout="@layout/query_details_layout"/>
+
     <include layout="@layout/loading_layout"/>
 
 </RelativeLayout>
