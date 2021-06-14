@@ -1,19 +1,25 @@
 package com.sngs.swayam.smartapp.Activity.notification
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.naimee.swayam.utlis.theme3bottomnavigation.BottomNavigation
 import com.sngs.swayam.business.adapters.notifications.NotificationListAdapter
+import com.sngs.swayam.smartapp.Activity.HomeActivity
 import com.sngs.swayam.smartapp.Network.WebUtlis.Links
 import com.sngs.swayam.smartapp.Network.model.BaseResponse
 import com.sngs.swayam.smartapp.Network.model.Notification.NotificationBaseResponse
 import com.sngs.swayam.smartapp.Network.servicecall.ServiceCall
 import com.sngs.swayam.smartapp.R
+import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_notification.*
+import kotlinx.android.synthetic.main.activity_notification.bottomNavigation
 import kotlinx.android.synthetic.main.loading_layout.*
 import kotlinx.android.synthetic.main.query_details_layout.*
 import retrofit2.Call
@@ -23,6 +29,13 @@ import retrofit2.Response
 class NotificationActivity : AppCompatActivity(){
 
     var Event_id : String = ""
+    companion object {
+        private const val ID_HOME = 1
+        private const val ID_MARKET = 2
+        private const val ID_UTILITIES = 3
+        private const val ID_NOTIFICATION = 4
+        private const val ID_SHARE = 5
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,9 +49,73 @@ class NotificationActivity : AppCompatActivity(){
         init()
         set_data()
         click()
+        init_bottom_navigation()
 
     }
 
+    public fun init_bottom_navigation() {
+        bottomNavigation.add(
+                BottomNavigation.Model(
+                        ID_HOME,
+                        R.drawable.home_icon
+                ))
+        bottomNavigation.add(
+                BottomNavigation.Model(
+                        ID_MARKET,
+                        R.drawable.market_icon
+                ))
+        bottomNavigation.add(
+                BottomNavigation.Model(
+                        ID_UTILITIES,
+                        R.drawable.utility_icon
+                ))
+        bottomNavigation.add(
+                BottomNavigation.Model(
+                        ID_NOTIFICATION,
+                        R.drawable.ic_notification
+                ))
+        bottomNavigation.add(
+                BottomNavigation.Model(
+                        ID_SHARE,
+                        R.drawable.ic_share_icon
+                ))
+
+        bottomNavigation.setOnShowListener {
+            val name = when (it.id) {
+                ID_HOME -> "HOME"
+                ID_MARKET -> "MARKET"
+                ID_UTILITIES -> "UTILITIES"
+                ID_NOTIFICATION -> "NOTIFICATION"
+                ID_SHARE -> "SHARE"
+                else -> ""
+            }
+        }
+        bottomNavigation.setOnClickMenuListener {
+            val name = when (it.id) {
+                ID_HOME -> "HOME"
+                ID_MARKET -> "MARKET"
+                ID_UTILITIES -> "UTILITIES"
+                ID_NOTIFICATION -> "NOTIFICATION"
+                ID_SHARE -> "SHARE"
+                else -> ""
+            }
+
+            if(name.equals("HOME")){
+                finish()
+            }
+
+            if(name.equals("MARKET")){ }
+
+            if(name.equals("UTILITIES")){ }
+
+            if(name.equals("NOTIFICATION")){}
+
+        }
+
+        Handler().postDelayed(Runnable {
+            bottomNavigation.show(ID_NOTIFICATION,true)
+        },800)
+    }
 
 
     private fun init() {

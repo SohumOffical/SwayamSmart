@@ -43,6 +43,8 @@ import com.sngs.swayam.smartapp.R
 import com.sngs.swayam.smartapp.User.LoginActivity
 import kotlinx.android.synthetic.main.activity_drawer.*
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_home.bottomNavigation
+import kotlinx.android.synthetic.main.activity_notification.*
 import kotlinx.android.synthetic.main.loading_layout.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -142,18 +144,6 @@ class HomeActivity : AppCompatActivity() {
                 R.drawable.ic_share_icon
             ))
 
-        bottomNavigation.setOnShowListener {
-            val name = when (it.id) {
-                ID_HOME -> "HOME"
-                ID_MARKET -> "MARKET"
-                ID_UTILITIES -> "UTILITIES"
-                ID_NOTIFICATION -> "NOTIFICATION"
-                ID_SHARE -> "SHARE"
-                else -> ""
-            }
-        }
-
-
         bottomNavigation.setOnClickMenuListener {
             val name = when (it.id) {
                 ID_HOME -> "HOME"
@@ -171,6 +161,10 @@ class HomeActivity : AppCompatActivity() {
             if(name.equals("NOTIFICATION")){
                 val intent = Intent(this, NotificationActivity::class.java)
                 startActivity(intent)
+            }
+
+            if(name.equals("ID_SHARE")){
+
             }
 
         }
@@ -489,6 +483,11 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+
+        Handler().postDelayed(Runnable {
+            bottomNavigation.show(ID_HOME,true)
+        },800)
+
         api_calling_for_user_promotion_list()
         api_calling_for_banner_list()
         api_calling_for_advertisment_list()
